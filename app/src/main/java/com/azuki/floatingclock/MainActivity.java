@@ -13,6 +13,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(0, 0);
         launchClock();
     }
 
@@ -30,7 +31,9 @@ public class MainActivity extends Activity {
         } else {
             startService(service);
         }
+
         finish();
+        overridePendingTransition(0, 0);
     }
 
     @Override
@@ -41,6 +44,7 @@ public class MainActivity extends Activity {
                 launchClock();
             } else {
                 finish();
+                overridePendingTransition(0, 0);
             }
         }
     }
